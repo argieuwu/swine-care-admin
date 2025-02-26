@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - ASF Research Initiative</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <header>
+        <div class="container nav-container">
+            <div class="logo">ASF<span>Tracker</span></div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#">Reports</a>
+                <a href="#">Settings</a>
+                <div class="user-profile">
+                    <div class="user-avatar">U</div>
+                    <span>User</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="main-content">
+        <aside class="sidebar">
+            <h3>Dashboard Navigation</h3>
+            
+            <p class="menu-title">Monitoring</p>
+            <ul class="sidebar-menu">
+                <li><a href="#" class="active">Overview</a></li>
+                <li><a href="#">Outbreaks Map</a></li>
+                <li><a href="#">Statistics</a></li>
+                <li><a href="#">Trends</a></li>
+            </ul>
+            
+            <p class="menu-title">Management</p>
+            <ul class="sidebar-menu">
+                <li><a href="#">Case Reports</a></li>
+                <li><a href="#">Farm Registry</a></li>
+                <li><a href="#">Resources</a></li>
+            </ul>
+            
+            <p class="menu-title">Administration</p>
+            <ul class="sidebar-menu">
+                <li><a href="#">User Management</a></li>
+                <li><a href="#">Data Import/Export</a></li>
+                <li><a href="#">System Logs</a></li>
+            </ul>
+        </aside>
+        
+        <div class="dashboard-content">
+            <div class="dashboard-header">
+                <h1>ASF Monitoring Dashboard</h1>
+                <div class="date-filter">
+                    <label for="date-range">Filter by date:</label>
+                    <select id="date-range">
+                        <option value="7">Last 7 days</option>
+                        <option value="30" selected>Last 30 days</option>
+                        <option value="90">Last 3 months</option>
+                        <option value="365">Last year</option>
+                        <option value="custom">Custom range</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="stats-cards">
+                <div class="stat-card">
+                    <h3>Total Cases</h3>
+                    <div class="stat-value">147</div>
+                    <div class="stat-trend positive">↑ 12 from previous period</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Active Outbreaks</h3>
+                    <div class="stat-value">24</div>
+                    <div class="stat-trend negative">↓ 3 from previous period</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Affected Farms</h3>
+                    <div class="stat-value">89</div>
+                    <div class="stat-trend positive">↑ 8 from previous period</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Containment Rate</h3>
+                    <div class="stat-value">76%</div>
+                    <div class="stat-trend positive">↑ 5% from previous period</div>
+                </div>
+            </div>
+            
+            <div class="data-visualization">
+                <div class="map-container">
+                    <h2>ASF Cases in Davao Del Norte</h2>
+                    <div id="map-chart">
+                        <!-- Map will be rendered here by JavaScript -->
+                    </div>
+                </div>
+                
+                <div class="charts-container">
+                    <div class="chart-card">
+                        <h3>Cases by Municipality</h3>
+                        <div id="municipality-chart" class="chart"></div>
+                    </div>
+                    <div class="chart-card">
+                        <h3>Monthly Trend</h3>
+                        <div id="trend-chart" class="chart"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="recent-reports">
+                <div class="section-header">
+                    <h2>Recent Reports</h2>
+                    <a href="#" class="view-all">View All</a>
+                </div>
+                
+                <table class="reports-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Municipality</th>
+                            <th>Farm ID</th>
+                            <th>Status</th>
+                            <th>Affected</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Feb 24, 2025</td>
+                            <td>Panabo City</td>
+                            <td>FARM-238</td>
+                            <td><span class="status confirmed">Confirmed</span></td>
+                            <td>45 pigs</td>
+                            <td><a href="#" class="action-btn">View Details</a></td>
+                        </tr>
+                        <tr>
+                            <td>Feb 22, 2025</td>
+                            <td>Tagum City</td>
+                            <td>FARM-112</td>
+                            <td><span class="status suspected">Suspected</span></td>
+                            <td>23 pigs</td>
+                            <td><a href="#" class="action-btn">View Details</a></td>
+                        </tr>
+                        <tr>
+                            <td>Feb 20, 2025</td>
+                            <td>Carmen</td>
+                            <td>FARM-097</td>
+                            <td><span class="status resolved">Resolved</span></td>
+                            <td>32 pigs</td>
+                            <td><a href="#" class="action-btn">View Details</a></td>
+                        </tr>
+                        <tr>
+                            <td>Feb 18, 2025</td>
+                            <td>Kapalong</td>
+                            <td>FARM-156</td>
+                            <td><span class="status confirmed">Confirmed</span></td>
+                            <td>19 pigs</td>
+                            <td><a href="#" class="action-btn">View Details</a></td>
+                        </tr>
+                        <tr>
+                            <td>Feb 15, 2025</td>
+                            <td>New Corella</td>
+                            <td>FARM-201</td>
+                            <td><span class="status suspected">Suspected</span></td>
+                            <td>12 pigs</td>
+                            <td><a href="#" class="action-btn">View Details</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>

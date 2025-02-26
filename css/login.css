@@ -1,0 +1,132 @@
+/* Login Page Specific Styles */
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo a {
+    color: var(--text-light);
+    text-decoration: none;
+}
+
+.login-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.login-card {
+    background-color: var(--text-light);
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    padding: 2.5rem;
+    text-align: center;
+}
+
+.login-header {
+    margin-bottom: 2rem;
+}
+
+.login-header h2 {
+    color: var(--primary);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.login-header p {
+    color: #777;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(139, 0, 0, 0.1);
+}
+
+.forgot-password {
+    text-align: right;
+    margin-top: -0.8rem;
+}
+
+.forgot-password a {
+    color: #777;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.forgot-password a:hover {
+    color: var(--primary);
+}
+
+.login-form .btn {
+    margin-top: 1rem;
+    width: 100%;
+    background-color: var(--primary);
+    color: var(--text-light);
+}
+
+.login-form .btn:hover {
+    background-color: #700000;
+}
+
+.login-footer {
+    margin-top: 2rem;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.login-footer a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.login-footer a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    margin-top: auto;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .login-card {
+        padding: 1.5rem;
+    }
+}
