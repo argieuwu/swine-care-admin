@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - ASF Tracker Davao del Norte</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <header>
+        <div class="container nav-container">
+            <div class="logo">ASF<span>Tracker</span></div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#">Reports</a>
+                <a href="#">Settings</a>
+                <div class="user-profile">
+                    <div class="user-avatar">A</div>
+                    <span>Admin</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="main-content">
+        <aside class="sidebar">
+            <h3>Dashboard Navigation</h3>
+            
+            <p class="menu-title">Monitoring</p>
+            <ul class="sidebar-menu">
+                <li><a href="#" class="active">Overview</a></li>
+                <li><a href="#">Outbreaks Map</a></li>
+                <li><a href="#">Statistics</a></li>
+                <li><a href="#">Trends</a></li>
+            </ul>
+            
+            <p class="menu-title">Management</p>
+            <ul class="sidebar-menu">
+                <li><a href="#">Case Reports</a></li>
+                <li><a href="#">Farm Registry</a></li>
+                <li><a href="#">Resources</a></li>
+            </ul>
+            
+            <p class="menu-title">Administration</p>
+            <ul class="sidebar-menu">
+                <li><a href="#">User Management</a></li>
+                <li><a href="#">Data Import/Export</a></li>
+                <li><a href="#">System Logs</a></li>
+            </ul>
+        </aside>
+        
+        <div class="dashboard-content">
+            <div class="dashboard-header">
+                <h1>ASF Monitoring Dashboard</h1>
+                <div class="date-filter">
+                    <label for="date-range">Filter by date:</label>
+                    <select id="date-range">
+                        <option value="7">Last 7 days</option>
+                        <option value="30" selected>Last 30 days</option>
+                        <option value="90">Last 3 months</option>
+                        <option value="365">Last year</option>
+                        <option value="custom">Custom range</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="stats-cards"></div>
+            
+            <div class="recent-reports">
+                <div class="section-header">
+                    <h2>Recent Diagnosis Reports</h2>
+                    <a href="#" class="view-all">View All</a>
+                </div>
+                
+                <table class="reports-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Municipality</th>
+                            <th>Farm ID</th>
+                            <th>Status</th>
+                            <th>Affected</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>© 2025 Provincial Veterinary Office of Davao del Norte. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="js/app.js"></script>
+</body>
+</html>
