@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else if (document.getElementById("registerForm")) {
       const view = new RegisterView();
       view.bindRegister();
-    } else if (document.querySelector(".dashboard-content")) {
+    } else if (document.querySelector("dashboard-content")) {
       const view = new DashboardView();
       view.renderStats();
       view.renderReports();
