@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASF Map - ASF Tracker Admin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/map.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+</head>
+<body>
+    <header>
+        <div class="container nav-container">
+            <div class="logo"><a href="../index.html">ASF<span>Tracker</span></a></div>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="#">Reports</a>
+                <a href="#">Settings</a>
+                <div class="user-profile">
+                    <div class="user-avatar">A</div>
+                    <span>Admin</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="main-content">
+        <aside class="sidebar">
+            <h3>Admin Navigation</h3>
+            <p class="menu-title">Monitoring</p>
+            <ul class="sidebar-menu">
+                <li><a href="overview.html">Overview</a></li>
+                <li><a href="map.html" class="active">ASF Map</a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <button id="logout-btn" class="logout-btn">Logout</button>
+            </div>
+        </aside>
+        
+        <div class="map-content">
+            <div class="map-header">
+                <h1>ASF Detection Map</h1>
+                <div class="map-controls">
+                    <div class="date-filter">
+                        <label for="date-range">Filter by date:</label>
+                        <select id="date-range">
+                            <option value="7">Last 7 days</option>
+                            <option value="30" selected>Last 30 days</option>
+                            <option value="90">Last 3 months</option>
+                            <option value="365">Last year</option>
+                            <option value="custom">Custom range</option>
+                        </select>
+                    </div>
+                    <div class="risk-filter">
+                        <label for="risk-level">Risk Level:</label>
+                        <select id="risk-level">
+                            <option value="all" selected>All</option>
+                            <option value="high">High Risk</option>
+                            <option value="moderate">Moderate Risk</option>
+                            <option value="low">Low Risk</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div id="map" style="height: 500px;"></div>
+            <div class="map-summary">
+                <h3>Summary</h3>
+                <p>Total Farms Mapped: <span id="total-farms">3</span></p>
+                <p class="clickable" data-risk="high">High-Risk: <span id="high-risk">1</span></p>
+                <p class="clickable" data-risk="moderate">Moderate-Risk: <span id="moderate-risk">1</span></p>
+                <p class="clickable" data-risk="low">Low-Risk: <span id="low-risk">1</span></p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>© 2025 Provincial Veterinary Office of Davao del Norte. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="views/map.js"></script>
+</body>
+</html>
