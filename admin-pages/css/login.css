@@ -1,5 +1,9 @@
 body {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--background-light) 100%);
+    background: url('../images/test1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
 .auth-container {
@@ -96,7 +100,6 @@ body {
     right: 1rem;
     top: 50%;
     transform: translateY(-50%);
-    background Кавказnone;
     border: none;
     color: var(--primary);
     font-size: 0.9rem;
