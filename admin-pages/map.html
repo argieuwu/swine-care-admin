@@ -13,15 +13,12 @@
     <header>
         <div class="container nav-container">
             <div class="logo">
-                <a href="../index.html">
-                    <img src="../images/SwineCareIcon.png" alt="Pig Icon" class="logo-icon">
+                <a>
+                    <img src="images/SwineCareIcon.png" alt="Pig Icon" class="logo-icon">
                     ASF<span>Tracker</span>
                 </a>
             </div>
             <div class="nav-links">
-                <a href="../index.html">Home</a>
-                <a href="#">Reports</a>
-                <a href="#">Settings</a>
                 <div class="user-profile">
                     <div class="user-avatar">A</div>
                     <span>Admin</span>
@@ -32,12 +29,14 @@
     
     <div class="main-content">
         <aside class="sidebar">
-            <h3>Admin Navigation</h3>
-            <p class="menu-title">Monitoring</p>
-            <ul class="sidebar-menu">
-                <li><a href="overview.html">Overview</a></li>
-                <li><a href="map.html" class="active">ASF Map</a></li>
-            </ul>
+            <div class="sidebar-content">
+                <h3>Admin Navigation</h3>
+                <p class="menu-title">Monitoring</p>
+                <ul class="sidebar-menu">
+                    <li><a href="overview.html">Overview</a></li>
+                    <li><a href="map.html" class="active">ASF Map</a></li>
+                </ul>
+            </div>
             <div class="sidebar-footer">
                 <button id="logout-btn" class="logout-btn">Logout</button>
             </div>
@@ -81,6 +80,7 @@
     
     
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-    <script src="views/map.js"></script>
+    <script src="js/views/map.js"></script>
+    <script src="js/views/logoutView.js"></script>
 </body>
 </html>

@@ -41,30 +41,33 @@ body {
 
 .main-content {
     display: flex;
-    flex: 1;
+    min-height: calc(100vh - 60px);
+    margin-top: 60px;
 }
 
 .sidebar {
     width: 250px;
-    background-color: #F9F9F9;
-    padding: 2rem;
-    border-right: 1px solid var(--border-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    background-color: #fff;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
 }
 
 .sidebar h3 {
-    font-size: 1.4rem;
-    color: var(--primary);
-    margin-bottom: 2rem;
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #4CAF50;
 }
 
 .menu-title {
+    color: #666;
     font-size: 0.9rem;
-    color: #777;
-    margin: 1.5rem 0 0.5rem;
     text-transform: uppercase;
+    margin: 1.5rem 0 0.5rem;
 }
 
 .sidebar-menu {
@@ -77,17 +80,17 @@ body {
 
 .sidebar-menu a {
     display: block;
-    padding: 0.8rem 1rem;
-    color: var(--text-dark);
+    padding: 0.75rem 1rem;
+    color: #333;
     text-decoration: none;
-    border-radius: 5px;
-    transition: all 0.3s ease;
+    border-radius: 6px;
+    transition: all 0.3s;
 }
 
 .sidebar-menu a:hover,
 .sidebar-menu a.active {
-    background-color: var(--primary);
-    color: var(--text-light);
+    background-color: #4CAF50;
+    color: white;
 }
 
 .sidebar-footer {
@@ -113,7 +116,9 @@ body {
 
 .map-content {
     flex: 1;
+    margin-left: 250px;
     padding: 2rem;
+    background-color: #f5f5f5;
 }
 
 .map-header {
@@ -124,74 +129,75 @@ body {
 }
 
 .map-header h1 {
-    font-size: 2rem;
-    color: var(--primary);
+    color: #333;
+    font-size: 1.8rem;
+    font-weight: 600;
 }
 
 .map-controls {
     display: flex;
-    gap: 1rem;
-    align-items: center;
+    gap: 1.5rem;
 }
 
-.date-filter, .risk-filter {
+.date-filter,
+.risk-filter {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
-.date-filter label, .risk-filter label {
+.date-filter label,
+.risk-filter label {
+    color: #666;
     font-size: 0.9rem;
-    color: #555;
 }
 
-.date-filter select, .risk-filter select {
-    padding: 0.5rem;
-    border: 1px solid var(--border-color);
-    border-radius: 5px;
+.date-filter select,
+.risk-filter select {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    color: #333;
     font-size: 0.9rem;
-    background-color: var(--card-bg);
-    transition: border-color 0.3s ease;
-}
-
-.date-filter select:focus, .risk-filter select:focus {
-    border-color: var(--primary);
-    outline: none;
 }
 
 #map {
-    border-radius: 10px;
-    box-shadow: 0 4px 12px var(--shadow);
-    transition: opacity 0.3s ease;
+    width: 100%;
+    height: 500px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
 }
 
 .map-summary {
-    margin-top: 1rem;
-    background-color: var(--card-bg);
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px var(--shadow);
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .map-summary h3 {
+    color: #333;
     font-size: 1.2rem;
-    color: var(--primary);
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .map-summary p {
-    font-size: 0.9rem;
     color: #666;
-    margin: 0.3rem 0;
-    transition: color 0.3s ease;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
 }
 
-.map-summary p.clickable {
+.map-summary .clickable {
     cursor: pointer;
+    transition: color 0.3s;
 }
 
-.map-summary p.clickable:hover {
-    color: var(--primary);
+.map-summary .clickable:hover {
+    color: #4CAF50;
 }
 
 .map-summary span {
@@ -200,36 +206,33 @@ body {
 }
 
 @media (max-width: 768px) {
-    .nav-links {
-        gap: 1rem;
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
     }
-    .nav-links a {
-        font-size: 0.9rem;
+
+    .map-content {
+        margin-left: 0;
     }
+
     .main-content {
         flex-direction: column;
     }
-    .sidebar {
-        width: 100%;
-        border-right: none;
-        border-bottom: 1px solid var(--border-color);
-    }
-    .map-content {
-        padding: 1rem;
-    }
+
     .map-header {
         flex-direction: column;
-        align-items: flex-start;
         gap: 1rem;
     }
-    .map-header h1 {
-        font-size: 1.5rem;
-    }
+
     .map-controls {
         flex-direction: column;
-        align-items: flex-start;
+        width: 100%;
     }
-    #map {
-        height: 300px;
+
+    .date-filter,
+    .risk-filter {
+        width: 100%;
+        justify-content: space-between;
     }
 }
