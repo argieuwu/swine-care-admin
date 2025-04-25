@@ -12,19 +12,15 @@
     <header>
         <div class="container nav-container">
             <div class="logo">
-                <a href="../index.html">
-                    <img src="../images/SwineCareIcon.png" alt="Pig Icon" class="logo-icon">
+                <a>
+                    <img src="images/SwineCareIcon.png" alt="Pig Icon" class="logo-icon">
                     ASF<span>Tracker</span>
                 </a>
             </div>
             <div class="nav-links">
-                <a href="../index.html">Home</a>
-                <a href="#">Reports</a>
-                <a href="#">Settings</a>
                 <div class="user-profile">
                     <div class="user-avatar">A</div>
                     <span>Admin</span>
-                    <!-- Removed logout button from header -->
                 </div>
             </div>
         </div>
@@ -32,13 +28,14 @@
     
     <div class="main-content">
         <aside class="sidebar">
-            <h3>Admin Navigation</h3>
-            <p class="menu-title">Monitoring</p>
-            <ul class="sidebar-menu">
-                <li><a href="overview.html" class="active">Overview</a></li>
-                <li><a href="map.html">ASF Map</a></li>
-            </ul>
-          
+            <div class="sidebar-content">
+                <h3>Admin Navigation</h3>
+                <p class="menu-title">Monitoring</p>
+                <ul class="sidebar-menu">
+                    <li><a href="overview.html" class="active">Overview</a></li>
+                    <li><a href="map.html">ASF Map</a></li>
+                </ul>
+            </div>
             <div class="sidebar-footer">
                 <button id="logout-btn" class="logout-btn">Logout</button>
             </div>
@@ -89,6 +86,7 @@
         </div>
     </div>
     
-    <script src="views/overview.js"></script>
+    <script src="js/views/overview.js"></script>
+    <script src="js/views/logoutView.js"></script>
 </body>
 </html>
