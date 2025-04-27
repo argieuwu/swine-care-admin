@@ -4,17 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - ASF Tracker Davao del Norte</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
     <header>
-        <div class="container nav-container">
+        <div class="nav-container">
             <div class="logo">
                 <a>
-                    <img src="images/SwineCareFinal.png" alt="Pig Icon" class="logo-icon">
-                    ASF<span>Tracker</span>
+                    <img src="images/SwineCareFinal.png" alt="SwineCare Logo" class="logo-icon">
+                    <span class="logo-text">ASF <span class="highlight">DETECTION</span></span>
                 </a>
             </div>
         </div>
@@ -22,28 +21,33 @@
     
     <div class="auth-container">
         <div class="auth-card">
+            <div class="card-top-accent"></div>
             <div class="auth-header">
-                <h2>Admin Login</h2>
-                <p>Provincial Veterinary Office of Davao del Norte</p>
+                <h2>Welcome Back</h2>
+                <p>Enter your credentials to access the ASF Detection Management System</p>
             </div>
             
             <form class="auth-form" id="loginForm">
                 <div class="form-group">
-                    <input type="text" id="username" name="username" placeholder="Username" required>
+                    <input type="text" id="username" name="username" required>
                     <label for="username">Username</label>
                 </div>
                 
                 <div class="form-group">
-                    <input type="password" id="password" name="password" placeholder="Password" required>
+                    <input type="password" id="password" name="password" required>
                     <label for="password">Password</label>
                     <button type="button" class="toggle-password" aria-label="Toggle password visibility">Show</button>
                 </div>
                 
                 <div class="forgot-password">
-                    <a href="#">Forgot password?</a>
+                    <a href="forgotpassword.html">Forgot password?</a>
                 </div>
                 
-                <button type="submit" class="btn">Login</button>
+                <button type="submit" class="btn">Sign In</button>
+                
+                <div class="auth-divider">
+                    <span>Provincial Veterinary Office</span>
+                </div>
             </form>
             
             <div class="auth-footer">
