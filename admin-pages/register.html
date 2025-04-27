@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register - ASF Tracker Davao del Norte</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/register.css">
 </head>
 <body>
     <header>
-        <div class="container nav-container">
+        <div class="nav-container">
             <div class="logo">
                 <a>
                     <img src="images/SwineCareFinal.png" alt="SwineCare Logo" class="logo-icon">
@@ -22,33 +21,48 @@
     
     <div class="auth-container">
         <div class="auth-card">
+            <div class="card-top-accent"></div>
             <div class="auth-header">
-                <h2>Register</h2>
-                <p>Provincial Veterinary Office of Davao del Norte</p>
+                <h2>Request Access</h2>
+                <p>Join the ASF Detection Management System</p>
             </div>
             
             <form class="auth-form" id="registerForm">
                 <div class="form-group">
-                    <input type="text" id="username" name="username" placeholder="Username" required>
+                    <input type="text" id="username" name="username" required>
                     <label for="username">Username</label>
                 </div>
+                
                 <div class="form-group">
-                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <input type="email" id="email" name="email" required>
                     <label for="email">Email</label>
                 </div>
+                
                 <div class="form-group">
-                    <input type="password" id="password" name="password" placeholder="Password" required>
+                    <input type="password" id="password" name="password" required>
                     <label for="password">Password</label>
-                    <button type="button" class="toggle-password" aria-label="Toggle password visibility">
-                        <span class="toggle-text">Show</span>
-                    </button>
+                    <button type="button" class="toggle-password" aria-label="Toggle password visibility">Show</button>
                 </div>
                 
-                <button type="submit" class="btn">Register</button>
+                <div class="form-group">
+                    <select id="role" name="role" required>
+                        <option value="" disabled selected>Select your role</option>
+                        <option value="veterinarian">Veterinarian</option>
+                        <option value="field_officer">Field Officer</option>
+                        <option value="admin_staff">Administrative Staff</option>
+                    </select>
+                    <label for="role" class="select-label">Role</label>
+                </div>
+                
+                <button type="submit" class="btn">Submit Request</button>
+                
+                <div class="auth-divider">
+                    <span>Provincial Veterinary Office</span>
+                </div>
             </form>
             
             <div class="auth-footer">
-                <p>Already have an account? <a href="login.html">Login</a></p>
+                <p>Already have an account? <a href="login.html">Sign In</a></p>
             </div>
         </div>
     </div>
