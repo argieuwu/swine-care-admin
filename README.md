@@ -49,16 +49,14 @@ This admin panel allows administrators to view, monitor, and manage detection da
 
 - Admin login authentication
 - View ASF detection reports from users
-- Display prediction results (Positive / Negative)
+- Display prediction results (High Risk / Moderate / Low Risk)
 - Monitor user reports in real-time
 - View locations of reports on a map
-- Simple and clean web interface
 
 ---
 
 ## 🛠 Tech Stack
 
-- **Frontend**:
   - HTML
   - CSS
   - Vanilla JS
