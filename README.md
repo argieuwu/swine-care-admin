@@ -10,7 +10,7 @@ This admin panel allows administrators to view, monitor, and manage detection da
 
 ### 🔐 Login Page
 
-![Login Page](assests\screenshots\loginImage.png)
+![Login Page]([assests\screenshots\loginImage.png](https://github.com/argieuwu/swine-care-admin/blob/f0b64b9e2c8fe8a28ce461020b3891eb051f8f53/assests/screenshots/loginImage.png))
 
 
 
