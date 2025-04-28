@@ -60,11 +60,7 @@ This admin panel allows administrators to view, monitor, and manage detection da
 
 - **Frontend**:
   - HTML
-  - CSS3
-  - JavaScript (Vanilla JS)
-- **Backend**:
-  - Firebase Firestore (user and detection data)
-  - Firebase Authentication (optional, if configured)
-  - Google Maps API (for map view)
+  - CSS
+  - Vanilla JS
 
 ---
