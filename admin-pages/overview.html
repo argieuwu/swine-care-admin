@@ -58,10 +58,38 @@
             
             <div class="alerts-section">
                 <h3>Quick Alerts</h3>
-                <div id="alerts-container"></div>
+                <div id="alerts-container">
+                    <div class="alert high-risk">
+                        <span>⚠️</span> High-risk ASF case detected in Panabo City (FARM-238)
+                    </div>
+                    <div class="alert suspected">
+                        <span>⚠️</span> Suspected outbreak in Tagum City (FARM-112)
+                    </div>
+                </div>
             </div>
             
-            <div class="stats-cards"></div>
+            <div class="stats-cards">
+                <div class="stat-card">
+                    <h3>Total Cases</h3>
+                    <div class="stat-value">147</div>
+                    <div class="stat-trend positive">+5 Today</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Active Outbreaks</h3>
+                    <div class="stat-value">24</div>
+                    <div class="stat-trend negative">+2 Today</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Affected Farms</h3>
+                    <div class="stat-value">89</div>
+                    <div class="stat-trend positive">+3 Today</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Containment Rate</h3>
+                    <div class="stat-value">76%</div>
+                    <div class="stat-trend positive">+1% Today</div>
+                </div>
+            </div>
             
             <div class="recent-reports">
                 <div class="section-header">
@@ -80,11 +108,47 @@
                             <th>Action</th>
                         </tr>
                     </thead>
-                    <tbody></tbody>
+                    <tbody>
+                        <tr>
+                            <td>Feb 24, 2025</td>
+                            <td>Juan Dela Cruz</td>
+                            <td>FARM-238</td>
+                            <td>Panabo City</td>
+                            <td><span class="status confirmed">Confirmed</span></td>
+                            <td>45 pigs</td>
+                            <td><button class="action-btn" data-id="1">View Details</button></td>
+                        </tr>
+                        <tr>
+                            <td>Feb 22, 2025</td>
+                            <td>Maria Santos</td>
+                            <td>FARM-112</td>
+                            <td>Tagum City</td>
+                            <td><span class="status suspected">Suspected</span></td>
+                            <td>23 pigs</td>
+                            <td><button class="action-btn" data-id="2">View Details</button></td>
+                        </tr>
+                        <tr>
+                            <td>Feb 20, 2025</td>
+                            <td>Pedro Reyes</td>
+                            <td>FARM-097</td>
+                            <td>Carmen</td>
+                            <td><span class="status resolved">Resolved</span></td>
+                            <td>32 pigs</td>
+                            <td><button class="action-btn" data-id="3">View Details</button></td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
     </div>
+    
+    <dialog id="details-dialog" aria-labelledby="dialog-title">
+        <h2 id="dialog-title">Submission Details</h2>
+        <ul id="dialog-content" class="details-list"></ul>
+        <div class="dialog-actions">
+            <button class="close-btn" aria-label="Close dialog">✕</button>
+        </div>
+    </dialog>
     
     <script src="js/views/overview.js"></script>
     <script src="js/views/logoutView.js"></script>
