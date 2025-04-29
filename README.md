@@ -10,7 +10,7 @@ This admin panel allows administrators to view, monitor, and manage detection da
 
 ### 🔐 Login Page
 
-![Login Page](https://github.com/argieuwu/swine-care-admin/blob/main/assests/screenshots/loginImage.png?raw=true)
+![Login Page](https://github.com/user-attachments/assets/1807b4c8-a43a-4a9b-9764-41021cdec121)
 
 
 
@@ -20,7 +20,8 @@ This admin panel allows administrators to view, monitor, and manage detection da
 
 ### 🖥️ Dashboard Overview
 
-![Dashboard Overview](https://github.com/argieuwu/swine-care-admin/blob/main/assests/screenshots/overviewpage.png?raw=true)
+![Dashboard Overview](https://github.com/user-attachments/assets/84dc0310-9415-4af8-b3d9-5f8984544f75)
+
 
 > *View a list of user submissions, detection reports, and system status.*
 
@@ -28,7 +29,7 @@ This admin panel allows administrators to view, monitor, and manage detection da
 
 ### 🗺️ Map View Page
 
-![Map Page](https://github.com/argieuwu/swine-care-admin/blob/main/assests/screenshots/mappage.png?raw=true)
+![Map Page](https://github.com/user-attachments/assets/dae35641-ba14-4627-8214-70923c432f6f)
 
 > *View location-based reports on an interactive map.*
 
