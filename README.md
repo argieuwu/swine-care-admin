@@ -6,36 +6,41 @@ This admin panel allows administrators to view, monitor, and manage detection da
 
 ---
 
-## 📸 Admin Panel Screenshots
+## Admin Panel
 
-### 🔐 Login Page
+### Login Page
 
-![Login Page](https://github.com/user-attachments/assets/1807b4c8-a43a-4a9b-9764-41021cdec121)
-
-
+![Login Page](https://github.com/user-attachments/assets/96d0ced9-6458-46c1-b8a5-006aa858d696)
 
 > *Secure login for admin access.*
 
 ---
 
-### 🖥️ Dashboard Overview
+### Register Page
 
-![Dashboard Overview](https://github.com/user-attachments/assets/84dc0310-9415-4af8-b3d9-5f8984544f75)
+![Register Page](https://github.com/user-attachments/assets/cf631518-c1c8-459c-9304-7c8119ea9c46)
 
+> *Secure Register for admin access.*
+
+---
+
+### Dashboard Overview
+
+![Dashboard Overview](https://github.com/user-attachments/assets/9bcab4c9-ec5f-4e96-96cc-5234e3213276)
 
 > *View a list of user submissions, detection reports, and system status.*
 
 ---
 
-### 🗺️ Map View Page
+### Map View Page
 
-![Map Page](https://github.com/user-attachments/assets/dae35641-ba14-4627-8214-70923c432f6f)
+![Map Page](https://github.com/user-attachments/assets/24265a51-142f-42c0-b057-110850adbad3)
 
 > *View location-based reports on an interactive map.*
 
 ---
 
-## 🐖 Project Overview
+## Project Overview
 
 - **SwineCare Mobile App** (Flutter):  
   Farmers use the app to submit pig images for ASF detection.
@@ -46,7 +51,7 @@ This admin panel allows administrators to view, monitor, and manage detection da
 
 ---
 
-## ✨ Features
+## Features
 
 - Admin login authentication
 - View ASF detection reports from users
@@ -56,7 +61,7 @@ This admin panel allows administrators to view, monitor, and manage detection da
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
   - HTML
   - CSS
