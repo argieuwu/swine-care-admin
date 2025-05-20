@@ -1,18 +1,18 @@
 class MapView {
     constructor() {
         this.map = null;
-        this.markersLayer = L.layerGroup(); // To manage markers
+        this.markersLayer = L.layerGroup(); 
         this.dateFilter = document.getElementById("date-range");
         this.riskFilter = document.getElementById("risk-level");
         this.logoutBtn = document.getElementById("logout-btn");
         this.summaryItems = document.querySelectorAll(".map-summary p.clickable");
         this.markersData = [
-            { lat: 7.4475, lng: 125.8070, farmer: "Juan Dela Cruz", farmId: "FARM-238", result: "High Risk", date: "Mar 17, 2025" }, // Panabo City
-            { lat: 7.4469, lng: 125.8090, farmer: "Maria Santos", farmId: "FARM-112", result: "Moderate Risk", date: "Mar 16, 2025" }, // Tagum City
-            { lat: 7.3167, lng: 125.6833, farmer: "Pedro Reyes", farmId: "FARM-097", result: "Low Risk", date: "Mar 15, 2025" } // Carmen
+            { lat: 7.4475, lng: 125.8070, farmer: "Juan Dela Cruz", farmId: "FARM-238", result: "High Risk", date: "Mar 17, 2025" }, 
+            { lat: 7.4469, lng: 125.8090, farmer: "Maria Santos", farmId: "FARM-112", result: "Moderate Risk", date: "Mar 16, 2025" }, 
+            { lat: 7.3167, lng: 125.6833, farmer: "Pedro Reyes", farmId: "FARM-097", result: "Low Risk", date: "Mar 15, 2025" } 
         ];
         this.initMap();
-        this.updateMap("all"); // Initial render with all markers
+        this.updateMap("all"); 
         this.bindDateFilter();
         this.bindRiskFilter();
         this.bindSummaryClicks();
@@ -20,7 +20,7 @@ class MapView {
     }
 
     initMap() {
-        this.map = L.map('map').setView([7.3082, 125.6816], 10); // Center on Davao Region
+        this.map = L.map('map').setView([7.3082, 125.6816], 10); 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(this.map);
@@ -28,7 +28,7 @@ class MapView {
     }
 
     updateMap(riskLevel) {
-        this.markersLayer.clearLayers(); // Clear existing markers
+        this.markersLayer.clearLayers(); 
         const filteredMarkers = riskLevel === "all" 
             ? this.markersData 
             : this.markersData.filter(marker => marker.result.toLowerCase().includes(riskLevel));
@@ -60,7 +60,7 @@ class MapView {
         this.dateFilter.addEventListener("change", (event) => {
             const value = event.target.value;
             alert(`Date filter applied (mock): Showing map data for ${value === "custom" ? "custom range" : `last ${value} days`}.`);
-            // In a real app, filter markersData by date here and call updateMap()
+           
         });
     }
 
@@ -75,7 +75,7 @@ class MapView {
         this.summaryItems.forEach(item => {
             item.addEventListener("click", () => {
                 const riskLevel = item.getAttribute("data-risk");
-                this.riskFilter.value = riskLevel; // Sync with dropdown
+                this.riskFilter.value = riskLevel; 
                 this.updateMap(riskLevel);
             });
         });

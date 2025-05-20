@@ -40,6 +40,12 @@ header {
     padding: 0 2rem;
 }
 
+ .logo-text {
+    font-size: 1.50rem;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -62,10 +68,10 @@ header {
     margin-right: 12px;
 }
 
-.logo span {
-    color: #4CAF50;
+/* .logo span {
+    color: #1a1a1a;
     font-weight: 800;
-}
+} */
 
 /* User Profile Styles */
 .user-profile {
@@ -312,3 +318,20 @@ footer p {
     padding-top: 1rem;
     border-top: 1px solid #eee;
 }  
+
+/* underline sa Tracker na text sa title sheshhh */
+.highlight {
+    color: #10b981;
+    position: relative;
+    }
+
+    .highlight::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #10b981, rgba(16, 185, 129, 0.2));
+    border-radius: 2px;
+    }
